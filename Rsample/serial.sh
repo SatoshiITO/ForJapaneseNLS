@@ -5,7 +5,7 @@
 #PJM --mpi "proc=1"
 #PJM --mpi "use-rankdir"
 #PJM --stg-transfiles all
-#PJM --stgin "rank=0 /home/hp120311/k01244/public/R-3.0.1.tar.gz 0:../"
+#PJM --stgin "rank=0 /home/hp******/k*****/public/R-3.0.1.tar.gz 0:../"
 #PJM --stgin "rank=* ./sample.r %r:./"
 ##PJM --stgout "rank=* %r:result.txt ./Result/result%r.txt"
 #PJM -S
