@@ -5,8 +5,8 @@
 #PJM --mpi "proc=2"
 #PJM --mpi "use-rankdir"
 #PJM --stg-transfiles all
-#PJM --stgin "rank=0 /home/hp120311/k01244/public/R-3.0.1.tar.gz 0:../"
-#PJM --stgin "rank=0 /home/hp120311/k01244/public/bin/mpishell 0:../"
+#PJM --stgin "rank=0 /home/hp******/k*****/public/R-3.0.1.tar.gz 0:../"
+#PJM --stgin "rank=0 /home/hp******/k*****/public/bin/mpishell 0:../"
 #PJM --stgin "rank=0 ./setmyrank.sh 0:../"
 #PJM --stgin "rank=0 ./template.r 0:../template.r"
 #PJM --stgout "rank=* %r:sample.r ./Result/sample_%r.r"
