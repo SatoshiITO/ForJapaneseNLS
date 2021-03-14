@@ -1,0 +1,31 @@
+#!/bin/bash
+
+echo "3-dimensional rank-map-host file generator."
+echo "Usage: hostfilegen numX numY numZ"
+echo "Note : (0,0,0) node is occupied only by rank0."
+
+NX=$1
+NY=$2
+NZ=$3
+
+#echo "X,Y,Z = $NX $NY $NZ"
+
+FILE="map${NX}x${NY}x${NZ}.txt"
+
+echo "(0,0,0)" > $FILE
+
+for (( iter=0; iter < 4; iter++ )); do
+
+  for (( KK=0; KK < $NZ; KK++ )); do
+    for (( JJ=0; JJ < $NY; JJ++ )); do
+      for (( II=0; II < $NX; II++ )); do
+
+        if [ "$II$JJ$KK" != "000" ]; then
+          echo "($II,$JJ,$KK)" >> $FILE
+        fi
+
+      done ### II loop
+    done ### JJ loop
+  done ### KK loop
+
+done ###iter loop
